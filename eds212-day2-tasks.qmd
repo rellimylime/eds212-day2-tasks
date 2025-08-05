@@ -1,0 +1,15 @@
+---
+title: "eds212_day2_activities"
+format: html
+editor: visual
+---
+
+## Attach packages
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+```
+
+## 
