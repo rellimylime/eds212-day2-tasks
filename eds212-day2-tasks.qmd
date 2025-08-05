@@ -12,4 +12,24 @@ library(palmerpenguins)
 
 ```
 
-## 
+## Find derivatives using R
+
+```{r}
+# Define expression
+fx <- expression(x^2)
+pa <- expression(2*(3*a + 2)^4 - 5)
+
+# Compute derivative
+df_dx <- D(expr = fx, name = "x")
+df_dx
+
+dp_da <- D(expr = pa, name = "a")
+dp_da
+
+# Evaluate at x = 3
+x <- 3
+eval(df_dx)
+
+a <- 1.2
+eval(dp_da)
+```
