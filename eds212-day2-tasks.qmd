@@ -33,3 +33,22 @@ eval(df_dx)
 a <- 1.2
 eval(dp_da)
 ```
+
+## Penguin plot pt2
+
+```{r}
+#head(penguins)
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(aes(color = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(x = "Bill Length (mm)", y = "Bill Depth (mm)", title = "Bill Length vs Depth (mm)")
+```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm)) +
+  geom_jitter() +
+  labs(x = "Species", 
+       y = "Flipper Length (mm)",
+       title = "Species vs Flipper Length (mm)"
+       )
+```
